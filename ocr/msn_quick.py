@@ -39,11 +39,7 @@ class MsnQuick(Msn):
         # 输出初始信息
         if self.isNeedClear:  # 清空面板
             Config.main.panelClear()
-        else:  # 无需清空面板，则输出日志信息
-            self.outputPanel.print('\n\n')
-            startStr = f"快捷识图 {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}"
-            self.outputPanel.print(startStr, highlight='blue')
-            self.outputPanel.print('\n\n')
+        
 
     def onGet(self, numData, ocrData):
         # ==================== 分析文块 ====================
